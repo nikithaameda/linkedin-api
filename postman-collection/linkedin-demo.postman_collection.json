@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "9421a351-aa31-42e9-9fc5-c04b82a4e4eb",
+		"name": "linkedin-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/getProfile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer AQUEU60SHMNrAYRHBNyQixUXpeCngndPXFW0OmHGokk6Obo8pOahG_mVG-3DADKbPWJUxNv3vfAa_P6W1tE6xFRydwUk1T62phKXVSCMWXrfx3q4FlwVIIR_WatQRPR0Lz5X9aokBKeILtzLSbQJyzoybJp6Xzszn4aavB7EBGO3Md9m-uyyF9yerw_qGL1a3Lht7jdBuQToEyhcpyhNseYvBRR32wKdgcf3vvx_uf4Vo0-yWMdLheScQTPHhNlYym9lV1KJcFSfsJmGEJwsqP0qD8Q0JGsUvgXYTb6fkYRe08qpgqxqttNfbyyXzV3aL0rTpSGANSePoa_diOtfECE4XcHi6g"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "localhost:3000/getProfile",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://www.linkedin.com/oauth/v2/accessToken",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "code",
+							"value": "AQRmVie8eM-lKBhEjvaWh9hN7JT-oPrQN_mPgTaHUR1z2L4sv-G4A4PgBPCJ6IaZFJq59BULpUySWVsSNA0OFvuS013stXHGjHNyXJBwPMjNGr12vokFHfyLlG9fDPRAl-kwiHwJH10-GBDsw8-N6oreW8KX72NTgrgXBLx-L7RAYIPBGf3-my_NW0ZoXQ",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:3000/auth/callback",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "client_id",
+							"value": "78599055xxo2he",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "client_secret",
+							"value": "XSIgvLT7WmdAYVs4",
+							"type": "text",
+							"description": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "https://www.linkedin.com/oauth/v2/accessToken",
+					"protocol": "https",
+					"host": [
+						"www",
+						"linkedin",
+						"com"
+					],
+					"path": [
+						"oauth",
+						"v2",
+						"accessToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/getAccessToken",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "code",
+							"value": "AQSg2WOFRMCS4qlU6j9y2X9jUW5oBOfcZ705VS4PdK1x4OiGmIR3tDBNzggsW_vUUfn20-kpr1EwQybDWn566-nS6hWTdTR38K7Ye5OnI7EAmVRrFHaGfGj_5IjRATvYsUbKwbBs3EeheiZ95LInIJ53pmW15kMNo6Gfczjk7wYYb6W9W_qlXUEfGa6Dlg",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:3000/auth/callback",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "client_id",
+							"value": "78599055xxo2he",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "client_secret",
+							"value": "XSIgvLT7WmdAYVs4",
+							"type": "text",
+							"description": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/getAccessToken",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getAccessToken"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
